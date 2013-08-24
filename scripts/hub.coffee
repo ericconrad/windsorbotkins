@@ -6,14 +6,16 @@
 
 module.exports = (robot) ->
 
-  # robot.respond /hub me/i, (msg) ->
+  robot.respond /hub me/i, (msg) ->
 
-  #   msg.http("http://api.hub.jhu.edu/articles?v=0&key=billcosby&per_page=3") (err, res, body) -> 
+    msg.reply "Hub? Ok on it brb"
+    
+    msg.http("http://api.hub.jhu.edu/articles?v=0&key=billcosby&per_page=3") (err, res, body) -> 
 
-  #     payload = JSON.parse(body);
+      payload = JSON.parse(body);
 
-  #     msg.send article.url for article in payload._embedded.articles
+      msg.send article.url for article in payload._embedded.articles
 
-  robot.respond /test test/i, (msg) ->
+  # robot.respond /test test/i, (msg) ->
 
-    msg.send "you tested it"
+  #   msg.send "you tested it"
