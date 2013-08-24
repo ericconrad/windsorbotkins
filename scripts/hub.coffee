@@ -8,13 +8,16 @@ module.exports = (robot) ->
 
   robot.respond /hub me/i, (msg) ->
 
-    msg.reply "Hub? Ok on it brb"
+    msg.reply "Hub? Ok on it brb";
     
-    msg.http("http://api.hub.jhu.edu/articles?v=0&key=billcosby&per_page=3") (err, res, body) -> 
+    # msg.send typeof robot.http
 
-      payload = JSON.parse(body);
+    robot.http("http://api.hub.jhu.edu/articles?v=0&key=billcosby&per_page=3")
+      .get() (err, res, body) -> 
 
-      msg.send article.url for article in payload._embedded.articles
+        payload = JSON.parse(body);
+
+        msg.send article.headline + ": " + article.url for article in payload._embedded.articles
 
   # robot.respond /test test/i, (msg) ->
 
