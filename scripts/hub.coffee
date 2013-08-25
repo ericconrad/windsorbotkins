@@ -16,8 +16,11 @@ module.exports = (robot) ->
       .get() (err, res, body) -> 
 
         payload = JSON.parse(body);
+        articles = [];
 
-        msg.send article.headline + ": " + article.url for article in payload._embedded.articles.reverse();
+        articles.push article.headline + ": " + article.url for article in payload._embedded.articles;
+
+        msg.send articles.join "\n"
 
   # robot.respond /test test/i, (msg) ->
 
