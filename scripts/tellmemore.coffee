@@ -9,10 +9,13 @@ module.exports = (robot) ->
         msg.reply "Yes, please tell me more...";
         msg.send url
 
-
   robot.hear /a trap/i, (msg) ->
     imageMe msg, "ackbar it's a trap", false, false, (url) ->
       msg.send url
+
+  robot.hear /(ketchup|catsup|heinz)/i, (msg) ->
+    imageMe msg, msg.match[1], false, false, (url) ->
+      msg.send "Hey, Eric loves #{msg.match[1]}!\n#{url}"
 
 
 
