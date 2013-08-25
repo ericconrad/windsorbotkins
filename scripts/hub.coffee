@@ -17,7 +17,7 @@ module.exports = (robot) ->
 
         payload = JSON.parse(body);
 
-        msg.send article.headline + ": " + article.url for article in payload._embedded.articles
+        msg.send article.headline + ": " + article.url for article in payload._embedded.articles.reverse();
 
   # robot.respond /test test/i, (msg) ->
 
