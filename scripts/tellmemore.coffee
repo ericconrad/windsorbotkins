@@ -6,8 +6,13 @@ module.exports = (robot) ->
 
   robot.hear /tell me more/i, (msg) ->
     imageMe msg, "condescending wonka tell me more", false, false, (url) ->
-        msg.reply "Yes, please tell me more... \n#{url}"
+        msg.reply "Yes, please tell me more...";
+        msg.send url
 
+
+  robot.hear /a trap/i, (msg) ->
+    imageMe msg, "ackbar it's a trap", false, false, (url) ->
+      msg.send url
 
 
 
