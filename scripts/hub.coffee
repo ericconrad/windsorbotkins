@@ -11,7 +11,7 @@ module.exports = (robot) ->
     n = msg.match[3]
     apiKey = process.env.HUBOT_HUB_API_KEY
 
-    msg.send "grabbing #{n} hub articles brb / using #{apiKey}";
+    msg.send "grabbing #{n} hub articles brb";
     
     robot.http("http://api.hub.jhu.edu/articles?v=0&key=#{apiKey}&per_page=#{n}")
       .get() (err, res, body) -> 
