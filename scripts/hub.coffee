@@ -1,8 +1,20 @@
 # Description:
 #   Interacts with the JHU Hub API.
 #
+# Dependencies:
+#   "cheerio": "~0.12.1"
+#
+# Configuration:
+#   HUBOT_HUB_API_KEY
+#
 # Commands:
-#   hoppy grab 3 hub articles - Returns recent Hub articles for now.
+#   windsor grab <n> hub articles
+#
+# Notes:
+#   Grabs the latest articles only for now
+#
+# Author:
+#   jasonrhodes
 
 module.exports = (robot) ->
 

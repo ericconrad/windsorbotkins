@@ -1,10 +1,39 @@
 # Description:
 #   Gives information about a query from a list of sources
 #
+# Dependencies:
+#   "cheerio": "~0.12.1"
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   windsor tell (me|us|<name>) about <query>
+#
+# Notes:
+#   None
+#
+# Author:
+#   jasonrhodes
 
 cheerio = require('cheerio')
 
 module.exports = (robot) ->
+
+  robot.respond /tell (\w+) about (.*)/i, (msg) ->
+    wiki = getwiki msg.match[2], ($, url, person) ->
+      if !url && !person
+        msg.send "No Wikipedia results found for '#{msg.match[2]}'"
+        msg.send $
+      else
+        content = $("#mw-content-text")
+        paras = content.find("p")
+        msg.send $(paras[0]).text() + "\n" + $(paras[1]).text()
+        msg.send url
+
+      imageMe msg, "#{msg.match[2]}", false, false, (url) ->
+        msg.send url
+
 
   # Recursive get request that follows Wikipedia redirects
   getwiki = (person, callback, url) ->
@@ -41,22 +70,6 @@ module.exports = (robot) ->
           else 
             canonical = $("head link[rel='canonical']");
             callback $, $(canonical).attr('href'), person
-
-
-  robot.respond /tell (\w+) about (.*)/i, (msg) ->
-    wiki = getwiki msg.match[2], ($, url, person) ->
-      if !url && !person
-        msg.send "No Wikipedia results found for '#{msg.match[2]}'"
-        msg.send $
-      else
-        content = $("#mw-content-text")
-        paras = content.find("p")
-        msg.send $(paras[0]).text() + "\n" + $(paras[1]).text()
-        msg.send url
-
-      imageMe msg, "#{msg.match[2]}", false, false, (url) ->
-        msg.send url
-
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'

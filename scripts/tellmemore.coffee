@@ -1,6 +1,21 @@
 # Description:
 #   Interacts with the JHU Hub API.
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   shh it's a secret (try saying 'tell me more' or mentioning something is 'a trap')
+#
+# Notes:
+#   gifs may not be safe for work
+#
+# Author:
+#   jasonrhodes
+
 
 module.exports = (robot) ->
 
