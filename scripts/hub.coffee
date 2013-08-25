@@ -2,17 +2,18 @@
 #   Interacts with the JHU Hub API.
 #
 # Commands:
-#   hubot hub me - Returns recent Hub articles for now.
+#   hoppy grab 3 hub articles - Returns recent Hub articles for now.
 
 module.exports = (robot) ->
 
-  robot.respond /hub me/i, (msg) ->
+  robot.respond /(grab|show me|get|find) (the last )?([\d]+) hub articles/i, (msg) ->
 
-    msg.reply "Hub? Ok on it brb";
+    n = msg.match[3]
+    apiKey = process.env.HUBOT_HUB_API_KEY
+
+    msg.send "grabbing #{n} hub articles brb / using #{apiKey}";
     
-    # msg.send typeof robot.http
-
-    robot.http("http://api.hub.jhu.edu/articles?v=0&key=billcosby&per_page=3")
+    robot.http("http://api.hub.jhu.edu/articles?v=0&key=#{apiKey}&per_page=#{n}")
       .get() (err, res, body) -> 
 
         payload = JSON.parse(body);
@@ -21,7 +22,3 @@ module.exports = (robot) ->
         articles.push article.headline + ": " + article.url for article in payload._embedded.articles;
 
         msg.send articles.join "\n"
-
-  # robot.respond /test test/i, (msg) ->
-
-  #   msg.send "you tested it"
