@@ -19,8 +19,8 @@
 
 module.exports = (robot) ->
 
-  robot.hear /tell me more(.*)/i, (msg) ->
-    imageMe msg, "condescending wonka tell me more #{msg.match[1]}", false, false, (url) ->
+  robot.hear /tell me more/i, (msg) ->
+    imageMe msg, "condescending wonka tell me more", false, false, (url) ->
         msg.send "Yes, please tell us more...";
         msg.send url
 
