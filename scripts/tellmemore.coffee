@@ -19,9 +19,9 @@
 
 module.exports = (robot) ->
 
-  robot.hear /tell me more/i, (msg) ->
-    imageMe msg, "condescending wonka tell me more", false, false, (url) ->
-        msg.reply "Yes, please tell me more...";
+  robot.hear /tell me more(.*)/i, (msg) ->
+    imageMe msg, "condescending wonka tell me more #{msg.match[1]}", false, false, (url) ->
+        msg.send "Yes, please tell us more...";
         msg.send url
 
   robot.hear /a trap/i, (msg) ->
@@ -48,3 +48,5 @@ imageMe = (msg, query, animated, faces, cb) ->
       if images?.length > 0
         image  = msg.random images
         cb "#{image.unescapedUrl}#.png"
+      else
+        msg.send "No no image no findy but I wanted to but no :("

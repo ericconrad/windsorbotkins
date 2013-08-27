@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   windsor gif me
+#   hubot wtf
 #
 # Notes:
 #   gifs may not be safe for work
@@ -20,9 +20,12 @@ cheerio = require('cheerio')
 
 module.exports = (robot) ->
 
-    robot.respond /gif me/i, (msg) ->
+    robot.respond /wtf/i, (msg) ->
         robot.http("http://bukk.it")
             .get() (err, res, body) ->
-                $ = cheerio.load body
-                images = $("td > a")
-                msg.send "http://bukk.it/" + $(msg.random images).attr("href")
+                if !err
+                    $ = cheerio.load body
+                    images = $("td > a")
+                    msg.send "http://bukk.it/" + $(msg.random images).attr("href")
+                else 
+                    msg.send "Oops (#{err})"

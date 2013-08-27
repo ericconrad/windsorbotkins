@@ -41,4 +41,6 @@ imageMe = (msg, query, animated, faces, cb) ->
       if images?.length > 0
         image  = msg.random images
         cb "#{image.unescapedUrl}#.png"
+      else
+        msg.send "Zzzzzzz huh what sorry image no findy about the #{query}"
 

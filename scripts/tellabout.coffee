@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   windsor tell (me|us|<name>) about <query>
+#   hubot tell (me|us|<name>) about <query>
 #
 # Notes:
 #   None

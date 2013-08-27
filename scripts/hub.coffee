@@ -8,7 +8,7 @@
 #   HUBOT_HUB_API_KEY
 #
 # Commands:
-#   windsor grab <n> hub articles
+#   hubot grab <n> hub articles
 #
 # Notes:
 #   Grabs the latest articles only for now
