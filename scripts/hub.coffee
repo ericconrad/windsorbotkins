@@ -45,7 +45,7 @@ module.exports = (robot) ->
         $ = cheerio.load(body)
 
         results = $(".search-results .result .title a").slice(0, 3).map(() ->
-          $(this).text() + " | " + $(this).attr("href")
+          $(this).text() + " | " + $(this).attr("href") + " \n "
         )
 
         msg.send results
