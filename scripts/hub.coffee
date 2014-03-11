@@ -43,8 +43,6 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
 
         $ = cheerio.load(body)
-        results = $(".search-results .result .title a").slice(0, 3).map((i, el) ->
-          el.html()
-        ).toArray()
+        results = $(".search-results .result .title a").slice(0, 3).toArray()
 
         msg.send results.join "\n"
