@@ -29,5 +29,5 @@ module.exports = (robot) ->
   robot.hear /^gif( )?me (.*)$/i, (msg) ->
     giphy.search msg, msg.match[2]
 
-  robot.respond /^gif( me)? (.*)$/i, (msg) ->
+  robot.respond /gif( me| this)? (.*)$/i, (msg) ->
     giphy.search msg, msg.match[2]
