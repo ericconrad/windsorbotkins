@@ -39,11 +39,10 @@ module.exports = (robot) ->
 
   robot.respond /hub search (.*)$/, (msg) ->
 
-    robot.http("http://hub.jhu.edu/search?q=" + encodeUriComponent(msg.match[1]))
+    robot.http("http://hub.jhu.edu/search?q=" + encodeURIComponent(msg.match[1]))
       .get() (err, res, body) ->
 
         $ = cheerio.load(body)
         results = $(".search-results .result .title a").slice(0, 3)
 
         msg.send results.join "\n"
-        
