@@ -46,6 +46,6 @@ module.exports = (robot) ->
 
         results = $(".search-results .result .title").slice(0, 3).map(() ->
           $(this).html()
-        ).toArray()
+        )
 
-        msg.send results.join "\n"
+        msg.send results
