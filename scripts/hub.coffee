@@ -48,4 +48,4 @@ module.exports = (robot) ->
           $(this).html()
         )
 
-        msg.send results.html()
+        msg.send results
