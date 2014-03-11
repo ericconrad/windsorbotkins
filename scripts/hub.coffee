@@ -17,7 +17,7 @@
 #   jasonrhodes
 
 apiKey = process.env.HUBOT_HUB_API_KEY
-$ = require('cheerio')
+cheerio = require('cheerio')
 
 module.exports = (robot) ->
 
