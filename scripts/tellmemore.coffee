@@ -21,8 +21,8 @@ module.exports = (robot) ->
 
   robot.hear /tell me more/i, (msg) ->
     imageMe msg, "condescending wonka tell me more", false, false, (url) ->
-        msg.send "Yes, please tell us more...";
-        msg.send url
+      msg.send "Yes, please tell us more...";
+      msg.send url
 
   robot.hear /a trap/i, (msg) ->
     imageMe msg, "ackbar it's a trap", false, false, (url) ->
@@ -43,6 +43,18 @@ module.exports = (robot) ->
   robot.hear /^windor/i, (msg) ->
     msg.reply "Nope! #embracethes"
 
+  robot.hear /(jason|rhodes)/i, (msg) ->
+    imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
+      msg.send "#{msg.match[1]}? Now, that's a name I've not heard in a long time.";
+      msg.send url
+
+  robot.hear /when/i, (msg) ->
+    messages = ["When? Some time before the Wordpress migration, I'd say.", "When? Are you sure you didn't want who, what, where, why or how?", "When? The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
+    msg.reply msg.random messages
+
+  robot.hear /(cant|can't) decide/i, (msg) ->
+    imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
+      msg.send url
 
 
 imageMe = (msg, query, animated, faces, cb) ->
