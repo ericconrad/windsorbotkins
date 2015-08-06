@@ -52,6 +52,10 @@ module.exports = (robot) ->
     messages = ["When? Some time before the Wordpress migration, I'd say.", "When? Are you sure you didn't want who, what, where, why or how?", "When? The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
     msg.reply msg.random messages
 
+  robot.hear /(cant|can't) decide/i, (msg) ->
+    imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
+      msg.send url
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
