@@ -53,7 +53,7 @@ module.exports = (robot) ->
       msg.send url
       msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
-  robot.hear /when/i, (msg) ->
+  robot.hear /when (do|should|could|is)/i, (msg) ->
     messages = ["Some time before the Wordpress migration, I'd say.", "That's definitely going to have to wait until after the Wordpress migration.", "When? Are you sure you didn't want who, what, where, why or how?", "The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
     msg.reply msg.random messages
 
