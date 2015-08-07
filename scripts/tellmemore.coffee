@@ -54,7 +54,7 @@ module.exports = (robot) ->
       msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
   robot.hear /when/i, (msg) ->
-    messages = ["When? Some time before the Wordpress migration, I'd say.", "When? Are you sure you didn't want who, what, where, why or how?", "When? The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
+    messages = ["Some time before the Wordpress migration, I'd say.", "That's definitely going to have to wait until after the Wordpress migration.", "When? Are you sure you didn't want who, what, where, why or how?", "The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
     msg.reply msg.random messages
 
   robot.hear /not sure if/i, (msg) ->
@@ -81,6 +81,10 @@ module.exports = (robot) ->
     imageMe msg, "chris davis home run", true, false, (url) ->
       msg.send url;
       msg.send "Crush Davis?"
+
+  robot.hear /what[^"^\n]*you[^"^\n]*doing/i, (msg) ->
+    imageMe msg, "snl the californians ", true, false, (url) ->
+      msg.send url
 
 
 

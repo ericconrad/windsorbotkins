@@ -42,6 +42,10 @@ module.exports = (robot) ->
   robot.hear /do it/i, (msg) ->
     giphy.search msg, "shia labeouf do it"
 
-  robot.hear /whoa/i, (msg) ->  
+  robot.hear /whoa/i, (msg) ->
     msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif";
     msg.send "WHoOoOoOoA"
+
+  robot.hear /i (dont|don't) know/i, (msg) ->
+    msg.send "you know nothing jon snow";
+    msg.send "You know nothing"
