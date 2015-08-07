@@ -90,6 +90,9 @@ module.exports = (robot) ->
     messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that does sound the goodest"]
     msg.send msg.random messages
 
+  robot.hear /windsor\s*(should|could|to|do)[^"^\n]*(do|say|give|return|that|this|be|act)/i, (msg) ->
+    msg.send "Agreed. @eric get on it ^^"
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
