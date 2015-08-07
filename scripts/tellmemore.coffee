@@ -69,6 +69,19 @@ module.exports = (robot) ->
     imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
       msg.send url
 
+  robot.hear /neat/i, (msg) ->
+    imageMe msg, "futurama bender neat", true, false, (url) ->
+      msg.send url
+
+  robot.hear /(good|great) news/i, (msg) ->
+    imageMe msg, "futurama good news everyone", true, false, (url) ->
+      msg.send url
+
+  robot.hear /crush/i, (msg) ->
+    imageMe msg, "chris davis home run", true, false, (url) ->
+      msg.send url
+      msg.send "Crush Davis?"
+
 
 
 imageMe = (msg, query, animated, faces, cb) ->
