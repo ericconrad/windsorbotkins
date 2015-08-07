@@ -36,7 +36,7 @@ module.exports = (robot) ->
     messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
     msg.send msg.random messages
 
-  robot.hear /pretty\h+(cool|kewl)/i, (msg) ->
+  robot.hear /pretty\s+(cool|kewl)/i, (msg) ->
     messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
     msg.reply msg.random messages
 
@@ -53,11 +53,11 @@ module.exports = (robot) ->
       msg.send url
       msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
-  robot.hear /\b((when\h+(do|should|shouldnt|shouldn't|could|couldnt|couldn't|is|are|arent|aren't)\b)|(when\?|when(\n|$)))/i, (msg) ->
+  robot.hear /\b((when\s+(do|should|shouldnt|shouldn't|could|couldnt|couldn't|is|are|arent|aren't)\b)|(when\?|when(\n|$)))/i, (msg) ->
     messages = ["Some time before the Wordpress migration.", "That's definitely going to have to wait until after the Wordpress migration.", "Now", "Later", "Now & Later"]
     msg.reply msg.random messages
 
-  robot.hear /\bnot\h+sure\h+if\b/i, (msg) ->
+  robot.hear /\bnot\s+sure\s+if\b/i, (msg) ->
     imageMe msg, "fry not sure if", false, false, (url) ->
       msg.send url
 
@@ -65,7 +65,7 @@ module.exports = (robot) ->
     imageMe msg, "napoleon dynamite your mom goes to college", true, false, (url) ->
       msg.send url
 
-  robot.hear /\b(cant|can't)\h+decide\b/i, (msg) ->
+  robot.hear /\b(cant|can't)\s+decide\b/i, (msg) ->
     imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
       msg.send url
 
@@ -73,7 +73,7 @@ module.exports = (robot) ->
     imageMe msg, "futurama bender neat", true, false, (url) ->
       msg.send url
 
-  robot.hear /\b(good|great)\h+news\b/i, (msg) ->
+  robot.hear /\b(good|great)\s+news\b/i, (msg) ->
     imageMe msg, "futurama good news everyone", true, false, (url) ->
       msg.send url
 
@@ -86,11 +86,11 @@ module.exports = (robot) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
       msg.send url
 
-  robot.hear /\bsounds\h+good\b/i, (msg) ->
+  robot.hear /\bsounds\s+good\b/i, (msg) ->
     messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that does sound the goodest"]
     msg.reply msg.random messages
 
-  robot.hear /\bwindsor\h+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
+  robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
     messages = ["Agreed. @eric get on it ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
     msg.send msg.random messages
 
