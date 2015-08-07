@@ -41,3 +41,7 @@ module.exports = (robot) ->
 
   robot.hear /do it/i, (msg) ->
     giphy.search msg, "shia labeouf do it"
+
+  robot.hear /whoa/i, (msg) ->  
+    msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif";
+    msg.send "WHoOoOoOoA"
