@@ -91,7 +91,8 @@ module.exports = (robot) ->
     msg.send msg.random messages
 
   robot.hear /windsor\s*(should|could|to|do)[^"^\n]*(do|say|give|return|that|this|be|act)/i, (msg) ->
-    msg.send "Agreed. @eric get on it ^^"
+    messages = ["Agreed. @eric get on it ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
+    msg.send msg.random messages
 
 
 imageMe = (msg, query, animated, faces, cb) ->
