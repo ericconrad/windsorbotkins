@@ -43,9 +43,14 @@ module.exports = (robot) ->
   robot.hear /^windor/i, (msg) ->
     msg.reply "Nope! #embracethes"
 
-  robot.hear /(jason|rhodes)/i, (msg) ->
+  robot.hear /jason/i, (msg) ->
     imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
-      msg.send "#{msg.match[1]}? Now, that's a name I've not heard in a long time.";
+      msg.send "Now, that's a name I've not heard in a long time.";
+      msg.send url
+
+  robot.hear /rhodes/i, (msg) ->
+    imageMe msg, "doc brown we dont need roads", false, false, (url) ->
+      msg.send "Rhodes? Where we're going, we don't need Rhodes.";
       msg.send url
 
   robot.hear /when/i, (msg) ->
