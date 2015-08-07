@@ -32,27 +32,27 @@ module.exports = (robot) ->
   robot.respond /gif( me| this)? (.*)$/i, (msg) ->
     giphy.search msg, msg.match[2]
 
-  robot.hear /(thats|that's) awesome/i, (msg) ->
+  robot.hear /\b(thats|that's)\h+awesome\b/i, (msg) ->
     giphy.search msg, "mean girls fetch"
 
   robot.hear /remember/i, (msg) ->
     giphy.search msg, "the north remembers"
     msg.send "The north remembers"
 
-  robot.hear /do it/i, (msg) ->
+  robot.hear /\bdo\h+it\b/i, (msg) ->
     giphy.search msg, "shia labeouf do it"
 
   robot.hear /whoa/i, (msg) ->
     msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
     msg.send "WHoOoOoOoA"
 
-  robot.hear /i (dont|don't) know/i, (msg) ->
+  robot.hear /\bi\h+(dont|don't)\h+know\b/i, (msg) ->
     giphy.search msg, "you know nothing jon snow"
     msg.send "You know nothing"
 
-  robot.hear /(cat|cats|kitten|meow)/i, (msg) ->
+  robot.hear /\b(cat|cats|kitten|meow)\b/i, (msg) ->
     giphy.search msg, "cat"
     msg.send "*meow*"
 
-  robot.hear /boop/i, (msg) ->
+  robot.hear /\bboop\b/i, (msg) ->
     giphy.search msg, "boop"
