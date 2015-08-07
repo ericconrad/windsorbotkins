@@ -32,12 +32,6 @@ module.exports = (robot) ->
   robot.respond /gif( me| this)? (.*)$/i, (msg) ->
     giphy.search msg, msg.match[2]
 
-  robot.hear /(cant|can't) decide/i, (msg) ->
-    giphy.search msg, "curb your enthusiasm can't decide"
-
-  robot.hear /college/i, (msg) ->
-    giphy.search msg, "napoleon dynamite your mom goes to college"
-
   robot.hear /(thats|that's) awesome/i, (msg) ->
     giphy.search msg, "mean girls fetch"
 
