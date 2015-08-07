@@ -86,6 +86,9 @@ module.exports = (robot) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
       msg.send url
 
+  robot.hear /sounds good/i, (msg) ->
+    messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that does sound the goodest"]
+    msg.send msg.random messages
 
 
 imageMe = (msg, query, animated, faces, cb) ->
