@@ -61,6 +61,10 @@ module.exports = (robot) ->
     imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
       msg.send url
 
+  robot.hear /not sure if/i, (msg) ->
+    imageMe msg, "fry not sure if", false, false, (url) ->
+      msg.send url
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
