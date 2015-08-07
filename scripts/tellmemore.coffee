@@ -46,15 +46,15 @@ module.exports = (robot) ->
   robot.hear /jason/i, (msg) ->
     imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
       msg.send url
-      msg.send "Now, that's a name I've not heard in a long time."
+      msg.send "Jason? Now, that's a name I've not heard in a long time."
 
   robot.hear /rhodes/i, (msg) ->
     imageMe msg, "doc brown we dont need roads", false, false, (url) ->
       msg.send url
       msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
-  robot.hear /when (do|should|could|is)/i, (msg) ->
-    messages = ["Some time before the Wordpress migration, I'd say.", "That's definitely going to have to wait until after the Wordpress migration.", "When? Are you sure you didn't want who, what, where, why or how?", "The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
+  robot.hear /(when (do|should|could|is)|(when\?|when$))/i, (msg) ->
+    messages = ["Some time before the Wordpress migration.", "That's definitely going to have to wait until after the Wordpress migration.", "Now", "Later", "Now & Later"]
     msg.reply msg.random messages
 
   robot.hear /not sure if/i, (msg) ->
@@ -88,7 +88,7 @@ module.exports = (robot) ->
 
   robot.hear /sounds good/i, (msg) ->
     messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that does sound the goodest"]
-    msg.send msg.random messages
+    msg.reply msg.random messages
 
   robot.hear /windsor\s*(should|could|to|do)[^"^\n]*(do|say|give|return|that|this|be|act)/i, (msg) ->
     messages = ["Agreed. @eric get on it ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
