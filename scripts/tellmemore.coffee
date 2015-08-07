@@ -98,6 +98,12 @@ module.exports = (robot) ->
     messages = ["Could you not", "plz no", "http://media.giphy.com/media/11w0l0hDWECDJK/giphy.gif", "http://media.giphy.com/media/js6YTUxKVjH3y/giphy.gif", "http://media.giphy.com/media/KLMmqAB5UbEHK/giphy.gif"]
     msg.reply msg.random messages
 
+  robot.hear /(\s|\A|\@)wo(\s|$)/i, (msg) ->
+    msg.reply "Yes Grubb?"
+
+  robot.hear /(\s|\A|\@)(grubb)(\s|$)/i, (msg) ->
+    msg.reply "Yo, Wo!"
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
