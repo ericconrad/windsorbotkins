@@ -34,3 +34,16 @@ module.exports = (robot) ->
 
   robot.hear /(cant|can't) decide/i, (msg) ->
     giphy.search msg, "curb your enthusiasm can't decide"
+
+  robot.hear /college/i, (msg) ->
+    giphy.search msg, "napoleon dynamite your mom goes to college"
+
+  robot.hear /(thats|that's) awesome/i, (msg) ->
+    giphy.search msg, "mean girls fetch"
+
+  robot.hear /remember/i, (msg) ->
+    giphy.search msg, "the north remembers"
+    msg.send "The north remembers"
+
+  robot.hear /do it/i, (msg) ->
+    giphy.search msg, "shia labeouf do it"
