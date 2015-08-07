@@ -43,15 +43,15 @@ module.exports = (robot) ->
     giphy.search msg, "shia labeouf do it"
 
   robot.hear /whoa/i, (msg) ->
-    msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif";
+    msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
     msg.send "WHoOoOoOoA"
 
   robot.hear /i (dont|don't) know/i, (msg) ->
-    giphy.search msg, "you know nothing jon snow";
+    giphy.search msg, "you know nothing jon snow"
     msg.send "You know nothing"
 
   robot.hear /(cat|cats|kitten|meow)/i, (msg) ->
-    giphy.search msg, "cat";
+    giphy.search msg, "cat"
     msg.send "*meow*"
 
   robot.hear /boop/i, (msg) ->
