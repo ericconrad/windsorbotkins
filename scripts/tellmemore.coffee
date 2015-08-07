@@ -21,8 +21,8 @@ module.exports = (robot) ->
 
   robot.hear /tell me more/i, (msg) ->
     imageMe msg, "condescending wonka tell me more", false, false, (url) ->
-      msg.send "Yes, please tell us more...";
-      msg.send url
+      msg.send url;
+      msg.send "Yes, please tell us more..."
 
   robot.hear /a trap/i, (msg) ->
     imageMe msg, "ackbar it's a trap", false, false, (url) ->
@@ -45,13 +45,14 @@ module.exports = (robot) ->
 
   robot.hear /jason/i, (msg) ->
     imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
-      msg.send "Now, that's a name I've not heard in a long time.";
-      msg.send url
+      msg.send url;
+      msg.send "Now, that's a name I've not heard in a long time."
 
   robot.hear /rhodes/i, (msg) ->
     imageMe msg, "doc brown we dont need roads", false, false, (url) ->
-      msg.send "Rhodes? Where we're going, we don't need Rhodes.";
-      msg.send url
+      msg.send url;
+      msg.send "Rhodes? Where we're going, we don't need Rhodes."
+
 
   robot.hear /when/i, (msg) ->
     messages = ["When? Some time before the Wordpress migration, I'd say.", "When? Are you sure you didn't want who, what, where, why or how?", "When? The dentist's favorite time! Tooth hurty.\n\n...Tooth...\n\n...Hurty...", "Once upon a time..."]
@@ -79,7 +80,7 @@ module.exports = (robot) ->
 
   robot.hear /crush/i, (msg) ->
     imageMe msg, "chris davis home run", true, false, (url) ->
-      msg.send url
+      msg.send url;
       msg.send "Crush Davis?"
 
 
