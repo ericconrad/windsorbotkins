@@ -46,7 +46,7 @@ module.exports = (robot) ->
     msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
     msg.send "WHoOoOoOoA"
 
-  robot.hear /\bi\s+(dont|don't)\s+know\b/i, (msg) ->
+  robot.hear /\b(i\s*(((don\'*t)[^\n]*know)|dunno))|idk\b/i, (msg) ->
     giphy.search msg, "you know nothing jon snow"
     msg.send "You know nothing"
 
