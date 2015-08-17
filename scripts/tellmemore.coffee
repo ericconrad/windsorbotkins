@@ -82,7 +82,7 @@ module.exports = (robot) ->
       msg.send url
       msg.send "Crush Davis?"
 
-  robot.hear /\bwhat[^\n]+you[^\n]+doing\b/i, (msg) ->
+  robot.hear /\b(what[^\n]+you[^\n]+doing)|(califnorian[s]*)\b/i, (msg) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
       msg.send url
 

@@ -32,8 +32,8 @@ module.exports = (robot) ->
   robot.respond /gif( me| this)? (.*)$/i, (msg) ->
     giphy.search msg, msg.match[2]
 
-  robot.hear /\b(thats|that's)\s+awesome\b/i, (msg) ->
-    giphy.search msg, "mean girls fetch"
+  # robot.hear /\b(thats|that's)\s+awesome\b/i, (msg) ->
+  #   giphy.search msg, "mean girls fetch"
 
   robot.hear /remember/i, (msg) ->
     giphy.search msg, "the north remembers"
