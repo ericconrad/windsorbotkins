@@ -121,6 +121,21 @@ repo.
 
 [hubot-scripts]: https://github.com/github/hubot-scripts
 
+## external-scripts
+
+Tired of waiting for your script to be merged into `hubot-scripts`? Want to
+maintain the repository and package yourself? Then this added functionality
+maybe for you!
+
+Hubot is now able to load scripts from third-party `npm` packages! To enable
+this functionality you can follow the following steps.
+
+1. Add the packages as dependencies into your `package.json`
+2. `npm install` to make sure those packages are installed
+
+To enable third-party scripts that you've added you will need to add the package
+name as a double quoted string to the `external-scripts.json` file in this repo.
+
 ##  Persistence
 
 If you are going to use the `hubot-redis-brain` package (strongly suggested),
@@ -159,6 +174,7 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
     % heroku create --stack cedar
     % git push heroku master
+    % heroku ps:scale app=1
 
 If your Heroku account has been verified you can run the following to enable
 and add the Redis to Go addon to your app.
@@ -179,9 +195,10 @@ Please check out the [deploying hubot onto UNIX][deploy-unix] and [deploying
 hubot onto Windows][deploy-windows] wiki pages.
 
 [heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
-[deploy-heroku]: https://github.com/github/hubot/blob/master/docs/deploying/heroku.md
-[deploy-unix]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
-[deploy-windows]: https://github.com/github/hubot/blob/master/docs/deploying/unix.md
+[deploy-heroku]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-Heroku
+[deploy-unix]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-UNIX
+[deploy-windows]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-Windows
+[hubot-wiki]: https://github.com/github/hubot/wiki
 
 ## Campfire Variables
 
@@ -196,8 +213,7 @@ UI.
 
 Get the numeric IDs of the rooms you want the bot to join, comma delimited. If
 you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42`
-and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like
-this:
+and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
 
     % heroku config:add HUBOT_CAMPFIRE_ROOMS="42,1024"
 
@@ -205,8 +221,6 @@ Add the subdomain hubot should connect to. If you web URL looks like
 `http://mysubdomain.campfirenow.com` then you'd add it like this:
 
     % heroku config:add HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
-
-[hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
 
 ## Restart the bot
 
