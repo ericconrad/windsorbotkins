@@ -1,72 +1,25 @@
 {
-  "name": "hubot-slack",
-  "version": "3.3.0",
-  "author": {
-    "name": "Tiny Speck",
-    "url": "https://www.tinyspeck.com/"
-  },
-  "contributors": [
-    {
-      "name": "Myles Grant",
-      "email": "myles@tinyspeck.com"
-    },
-    {
-      "name": "Evan Solomon"
-    },
-    {
-      "name": "Jon Dalberg"
-    },
-    {
-      "name": "Patrick Connolly"
-    },
-    {
-      "name": "Chip Hayner",
-      "email": "chayner@centresource.com"
-    },
-    {
-      "name": "Eric Lindvall",
-      "email": "eric@papertrailapp.com"
-    }
-  ],
-  "keywords": [
-    "hubot",
-    "tinyspeck",
-    "adapter",
-    "slack"
-  ],
-  "description": "A Slack adapter for hubot",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/mit-license.php"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/slackhq/hubot-slack.git"
-  },
-  "bugs": {
-    "url": "https://github.com/slackhq/hubot-slack/issues",
-    "email": "feedback@tinyspeck.com"
-  },
-  "devDependencies": {
-    "coffee-script": "~1.7.1",
-    "grunt": "~0.4.1",
-    "grunt-release": "~0.6.0",
-    "should": "~2.0.2",
-    "mocha": "~1.13.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-shell": "~0.5.0",
-    "hubot": "~2.11"
-  },
-  "main": "./index",
-  "engines": {
-    "node": ">=0.4.7"
-  },
-  "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --reporter spec"
-  },
+  "name": "beans",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Eric Conrad <eric.jeffrey.conrad@gmail.com>",
+  "description": "A simple helpful robot for your Company",
   "dependencies": {
-    "slack-client": "~1.4.0"
+    "hubot": "^2.16.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-google-images": "^0.2.1",
+    "hubot-google-translate": "^0.2.0",
+    "hubot-help": "^0.1.1",
+    "hubot-heroku-keepalive": "^1.0.0",
+    "hubot-maps": "0.0.2",
+    "hubot-pugme": "^0.1.0",
+    "hubot-redis-brain": "0.0.3",
+    "hubot-rules": "^0.1.1",
+    "hubot-scripts": "^2.16.2",
+    "hubot-shipit": "^0.2.0",
+    "hubot-slack": "^3.3.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
