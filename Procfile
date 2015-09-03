@@ -1,1 +1,1 @@
-web: bin/hubot -a hipchat -n Windsor
+web: bin/hubot -a hipchat
