@@ -22,7 +22,6 @@
     "ntwitter": "https://github.com/sebhildebrandt/ntwitter/tarball/master"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.13.x"
+    "node": "0.10.x"
   }
 }

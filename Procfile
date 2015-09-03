@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n Beans
+web: bin/hubot -a slack
