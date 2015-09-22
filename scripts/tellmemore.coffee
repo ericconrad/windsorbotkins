@@ -77,10 +77,10 @@ module.exports = (robot) ->
     imageMe msg, "futurama good news everyone", true, false, (url) ->
       msg.send url
 
-  robot.hear /crush/i, (msg) ->
+  robot.hear /@dave/i, (msg) ->
     imageMe msg, "chris davis home run", true, false, (url) ->
       msg.send url
-      msg.send "Crush Davis?"
+      msg.reply "Did you mean @crush?"
 
   robot.hear /\b(what[^\n]+you[^\n]+doing)|(califnorian[s]*)\b/i, (msg) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
