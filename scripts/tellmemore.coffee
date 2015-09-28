@@ -105,8 +105,8 @@ module.exports = (robot) ->
     msg.reply "Yo, Wo!"
 
   robot.hear /the best/i, (msg) ->
-    msg.send "It's the best, #{msg.message.user.name}. The best!"
-    mes.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
+    msg.send "It's the best, @#{msg.message.user.mention_name}. The best!"
+    msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
 
 
 imageMe = (msg, query, animated, faces, cb) ->
