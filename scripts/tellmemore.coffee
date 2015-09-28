@@ -104,8 +104,8 @@ module.exports = (robot) ->
   robot.hear /(\b|\@)grubb\b/i, (msg) ->
     msg.reply "Yo, Wo!"
 
-  robot.hear /\b(the best)\b/i, (msg) ->
-    msg.reply "It's the best, Jerry. The best!"
+  robot.hear /the best/i, (msg) ->
+    msg.send "It's the best, Jerry. The best!"
 
 
 imageMe = (msg, query, animated, faces, cb) ->
