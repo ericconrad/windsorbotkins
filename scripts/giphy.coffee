@@ -50,8 +50,8 @@ module.exports = (robot) ->
     giphy.search msg, "you know nothing jon snow"
     msg.send "You know nothing"
 
-  robot.hear /\b(cat|cats|kitten|meow)\b/i, (msg) ->
-    giphy.search msg, "cat"
+  robot.hear /\b(cat(s*)|kitten(s*)|meow)(?!.*\.\S)\b/i, (msg) ->
+    giphy.search msg, msg.match[1]
     msg.send "*meow*"
 
   robot.hear /\bboop\b/i, (msg) ->
