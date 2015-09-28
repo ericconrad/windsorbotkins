@@ -104,6 +104,10 @@ module.exports = (robot) ->
   robot.hear /(\b|\@)grubb\b/i, (msg) ->
     msg.reply "Yo, Wo!"
 
+  robot.hear /the best/i, (msg) ->
+    msg.send "It's the best, Jerry. The best!"
+    mes.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
