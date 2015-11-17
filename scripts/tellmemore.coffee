@@ -108,6 +108,10 @@ module.exports = (robot) ->
     msg.send "It's the best, @#{msg.message.user.mention_name}. The best!"
     msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
 
+  robot.hear /hjesus/i, (msg) ->
+    msg.send "I bring you salvation and salvation accessories."
+    msg.send "https://c1.staticflickr.com/1/590/22678847867_6d26301634_o.png"
+
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
