@@ -36,7 +36,7 @@ module.exports = (robot) ->
   #   giphy.search msg, "mean girls fetch"
 
   robot.hear /remember/i, (msg) ->
-    giphy.search msg, "the north remembers"
+    giphy.search msg, "game of thrones the north remembers"
     msg.send "The north remembers"
 
   robot.hear /\bdo\s+it\b/i, (msg) ->
