@@ -77,10 +77,10 @@ module.exports = (robot) ->
     imageMe msg, "futurama good news everyone", true, false, (url) ->
       msg.send url
 
-  robot.hear /crush/i, (msg) ->
-    imageMe msg, "chris davis home run", true, false, (url) ->
-      msg.send url
-      msg.send "Crush Davis?"
+  # robot.hear /@dave/i, (msg) ->
+  #   imageMe msg, "chris davis home run", true, false, (url) ->
+  #     msg.send url
+  #     msg.reply "Did you mean @crush?"
 
   # robot.hear /\b(what[^\n]+you[^\n]+doing)|(califnorian[s]*)\b/i, (msg) ->
   #   imageMe msg, "snl the californians ", true, false, (url) ->
@@ -94,7 +94,7 @@ module.exports = (robot) ->
     messages = ["Agreed. @eric get on it ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
     msg.send msg.random messages
 
-  robot.hear /(moist)/i, (msg) ->
+  robot.hear /(moist|panties|slacks|ladies)/i, (msg) ->
     messages = ["Could you not", "plz no", "http://media.giphy.com/media/11w0l0hDWECDJK/giphy.gif", "http://media.giphy.com/media/js6YTUxKVjH3y/giphy.gif", "http://media.giphy.com/media/KLMmqAB5UbEHK/giphy.gif"]
     msg.reply msg.random messages
 
@@ -103,6 +103,14 @@ module.exports = (robot) ->
   #
   # robot.hear /(\b|\@)grubb\b/i, (msg) ->
   #   msg.reply "Yo, Wo!"
+
+  robot.hear /the best/i, (msg) ->
+    msg.send "It's the best, @#{msg.message.user.mention_name}. The best!"
+    msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
+
+  robot.hear /hjesus/i, (msg) ->
+    msg.send "I bring you salvation and salvation accessories."
+    msg.send "https://c1.staticflickr.com/1/590/22678847867_6d26301634_o.png"
 
 
 imageMe = (msg, query, animated, faces, cb) ->

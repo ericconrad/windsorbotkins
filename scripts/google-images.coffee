@@ -27,6 +27,10 @@ module.exports = (robot) ->
       imageMe msg, imagery, false, true, (url) ->
         msg.send "#{mustachify}#{url}"
 
+  robot.respond /meme( me)? (.*)/i, (msg) ->
+    imageMe msg, "#{msg.match[2]} meme", (url) ->
+      msg.send url
+
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
