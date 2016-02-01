@@ -35,24 +35,24 @@ module.exports = (robot) ->
   # robot.hear /\b(thats|that's)\s+awesome\b/i, (msg) ->
   #   giphy.search msg, "mean girls fetch"
 
-  robot.hear /remember/i, (msg) ->
-    giphy.search msg, "game of thrones the north remembers"
-    msg.send "The north remembers"
+  # robot.hear /remember/i, (msg) ->
+  #   giphy.search msg, "game of thrones the north remembers"
+  #   msg.send "The north remembers"
 
-  robot.hear /\bdo\s+it\b/i, (msg) ->
-    giphy.search msg, "shia labeouf do it motivation"
+  # robot.hear /\bdo\s+it\b/i, (msg) ->
+  #   giphy.search msg, "shia labeouf do it motivation"
 
-  robot.hear /whoa/i, (msg) ->
-    msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
-    msg.send "WHoOoOoOoA"
+  # robot.hear /whoa/i, (msg) ->
+  #   msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
+  #   msg.send "WHoOoOoOoA"
 
-  robot.hear /\b(i\s*(((don\'*t)[^\n]*know)|dunno))|idk\b/i, (msg) ->
-    giphy.search msg, "you know nothing jon snow"
-    msg.send "You know nothing"
+  # robot.hear /\b(i\s*(((don\'*t)[^\n]*know)|dunno))|idk\b/i, (msg) ->
+  #   giphy.search msg, "you know nothing jon snow"
+  #   msg.send "You know nothing"
 
-  robot.hear /\b(cat(s*)|kitten(s*)|meow)(?!.*\.\S)\b/i, (msg) ->
-    giphy.search msg, msg.match[1]
-    msg.send "*meow*"
+  # robot.hear /\b(cat(s*)|kitten(s*)|meow)(?!.*\.\S)\b/i, (msg) ->
+  #   giphy.search msg, msg.match[1]
+  #   msg.send "*meow*"
 
-  robot.hear /\bboop\b/i, (msg) ->
-    giphy.search msg, "boop"
+  # robot.hear /\bboop\b/i, (msg) ->
+  #   giphy.search msg, "boop"
