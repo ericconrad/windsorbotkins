@@ -27,9 +27,9 @@ module.exports = (robot) ->
     imageMe msg, "ackbar it's a trap", false, false, (url) ->
       msg.send url
 
-  # robot.hear /(ketchup|catsup|heinz)/i, (msg) ->
-  #   imageMe msg, msg.match[1], false, false, (url) ->
-  #     msg.send "Hey! @eric loves #{msg.match[1]}!"
+  robot.hear /(ketchup|catsup|heinz)/i, (msg) ->
+    imageMe msg, msg.match[1], false, false, (url) ->
+      msg.send "Hey! @eric loves #{msg.match[1]}!"
 
   robot.hear /mock[\s\-]*up/i, (msg) ->
     messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
@@ -39,18 +39,18 @@ module.exports = (robot) ->
     messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
     msg.reply msg.random messages
 
-  # robot.hear /^windor/i, (msg) ->
-  #   msg.reply "Nope! #embracethes"
+  robot.hear /^windor/i, (msg) ->
+    msg.reply "Nope! #embracethes"
 
-  # robot.hear /jason/i, (msg) ->
-  #   imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
-  #     msg.send url
-  #     msg.send "Jason? Now, that's a name I've not heard in a long time."
-  #
-  # robot.hear /rhodes/i, (msg) ->
-  #   imageMe msg, "doc brown we dont need roads", false, false, (url) ->
-  #     msg.send url
-  #     msg.send "Rhodes? Where we're going, we don't need Rhodes."
+  robot.hear /jason/i, (msg) ->
+    imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
+      msg.send url
+      msg.send "Jason? Now, that's a name I've not heard in a long time."
+
+  robot.hear /rhodes/i, (msg) ->
+    imageMe msg, "doc brown we dont need roads", false, false, (url) ->
+      msg.send url
+      msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
   # robot.hear /\b((when\s+(do|should|shouldnt|shouldn't|could|couldnt|couldn't|is|are|arent|aren't)\b)|(when\?|when(\n|$)))/i, (msg) ->
   #   messages = ["Some time before the Wordpress migration.", "That's definitely going to have to wait until after the Wordpress migration.", "Now", "Later", "Now & Later"]
@@ -81,9 +81,9 @@ module.exports = (robot) ->
   #     msg.send url
   #     msg.reply "Did you mean @crush?"
 
-  # robot.hear /\b(what[^\n]+you[^\n]+doing)|(califnorian[s]*)\b/i, (msg) ->
-  #   imageMe msg, "snl the californians ", true, false, (url) ->
-  #     msg.send url
+  robot.hear /\b(what[^\n]+you[^\n]+doing)|(califnorian[s]*)\b/i, (msg) ->
+    imageMe msg, "snl the californians ", true, false, (url) ->
+      msg.send url
 
   robot.hear /\bsounds\s+good\b/i, (msg) ->
     messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
@@ -97,11 +97,11 @@ module.exports = (robot) ->
     messages = ["Could you not", "plz no", "http://media.giphy.com/media/11w0l0hDWECDJK/giphy.gif", "http://media.giphy.com/media/js6YTUxKVjH3y/giphy.gif", "http://media.giphy.com/media/KLMmqAB5UbEHK/giphy.gif"]
     msg.reply msg.random messages
 
-  # robot.hear /(\b|\@)wo\b/i, (msg) ->
-  #   msg.reply "Yes Grubb?"
-  #
-  # robot.hear /(\b|\@)grubb\b/i, (msg) ->
-  #   msg.reply "Yo, Wo!"
+  robot.hear /(\b|\@)wo\b/i, (msg) ->
+    msg.reply "Yes Grubb?"
+  
+  robot.hear /(\b|\@)grubb\b/i, (msg) ->
+    msg.reply "Yo, Wo!"
 
   robot.hear /the best/i, (msg) ->
     msg.send "It's the best, @#{msg.message.user.mention_name}. The best!"
