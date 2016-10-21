@@ -89,8 +89,8 @@ module.exports = (robot) ->
     messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
     msg.reply msg.random messages
 
-  robot.hear /\bbeans\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
-    messages = ["Agreed. @eric get on it ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
+  robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
+    messages = ["Agreed. Someone should get on this ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
     msg.send msg.random messages
 
   robot.hear /(moist|panties|slacks|ladies)/i, (msg) ->
@@ -99,12 +99,12 @@ module.exports = (robot) ->
 
   robot.hear /(\b|\@)wo\b/i, (msg) ->
     msg.reply "Yes Grubb?"
-  
+
   robot.hear /(\b|\@)grubb\b/i, (msg) ->
     msg.reply "Yo, Wo!"
 
   robot.hear /the best/i, (msg) ->
-    msg.send "It's the best, @#{msg.message.user.mention_name}. The best!"
+    msg.send "It's the best, @#{msg.message.user.name}. The best!"
     msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
 
   robot.hear /hjesus/i, (msg) ->
