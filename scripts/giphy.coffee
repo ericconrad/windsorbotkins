@@ -39,8 +39,8 @@ module.exports = (robot) ->
   #   giphy.search msg, "game of thrones the north remembers"
   #   msg.send "The north remembers"
 
-  robot.hear /\bdo\s+it\b/i, (msg) ->
-    giphy.search msg, "shia labeouf do it motivation"
+  # robot.hear /\bdo\s+it\b/i, (msg) ->
+  #   giphy.search msg, "shia labeouf do it motivation"
 
   # robot.hear /whoa/i, (msg) ->
   #   msg.send "http://media.giphy.com/media/FRNQuq6FtiQHC/giphy.gif"
