@@ -31,9 +31,6 @@ module.exports = (robot) ->
     imageMe msg, msg.match[1], false, false, (url) ->
       msg.send "Hey! @eric loves #{msg.match[1]}!"
 
-  robot.hear /(third)/i, (msg) ->
-    msg.send "Third? Eye Blind? @#{msg.user[U0TRLTK50].name} loves that band!"
-
   robot.hear /mock[\s\-]*up/i, (msg) ->
     messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
     msg.send msg.random messages
