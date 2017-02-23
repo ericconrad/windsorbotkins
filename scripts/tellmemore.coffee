@@ -116,7 +116,7 @@ module.exports = (robot) ->
     msg.reply msg.random messages
 
   robot.hear /(\b|\@)not\s+(okay|ok)\b/i, (msg) ->
-    msg.reply "http://i.imgur.com/TwxR3hQ.png"
+    msg.reply "this :clap: is :clap: not :clap: okay :clap:"
 
 
 # imageMe = (msg, query, animated, faces, cb) ->
