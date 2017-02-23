@@ -111,9 +111,12 @@ module.exports = (robot) ->
     msg.send "I bring you salvation and salvation accessories."
     msg.send "https://c1.staticflickr.com/1/590/22678847867_6d26301634_o.png"
 
-    robot.hear /\b(remember|member)\b/i, (msg) ->
-      messages = ["I memba", "Ooohh I memba", "Yeah, I member that", "Membeerrrrr"]
-      msg.reply msg.random messages
+  robot.hear /\b(remember|member|memba)\b/i, (msg) ->
+    messages = ["I memba", "Ooohh I memba", "Yeah, I member that", "Membeerrrrr", "I memba, too"]
+    msg.reply msg.random messages
+
+  robot.hear /(\b|\@)not\s+(okay|ok)\b/i, (msg) ->
+    msg.reply "http://i.imgur.com/TwxR3hQ.png"
 
 
 # imageMe = (msg, query, animated, faces, cb) ->
