@@ -42,15 +42,15 @@ module.exports = (robot) ->
   robot.hear /^windor/i, (msg) ->
     msg.reply "Nope! #embracethes"
 
-  robot.hear /jason/i, (msg) ->
-    imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
-      msg.send url
-      msg.send "Jason? Now, that's a name I've not heard in a long time."
+  # robot.hear /jason/i, (msg) ->
+  #   imageMe msg, "ben kenobi name i havent heard", false, false, (url) ->
+  #     msg.send url
+  #     msg.send "Jason? Now, that's a name I've not heard in a long time."
 
-  robot.hear /rhodes/i, (msg) ->
-    imageMe msg, "doc brown we dont need roads", false, false, (url) ->
-      msg.send url
-      msg.send "Rhodes? Where we're going, we don't need Rhodes."
+  # robot.hear /rhodes/i, (msg) ->
+  #   imageMe msg, "doc brown we dont need roads", false, false, (url) ->
+  #     msg.send url
+  #     msg.send "Rhodes? Where we're going, we don't need Rhodes."
 
   # robot.hear /\b((when\s+(do|should|shouldnt|shouldn't|could|couldnt|couldn't|is|are|arent|aren't)\b)|(when\?|when(\n|$)))/i, (msg) ->
   #   messages = ["Some time before the Wordpress migration.", "That's definitely going to have to wait until after the Wordpress migration.", "Now", "Later", "Now & Later"]
@@ -103,15 +103,15 @@ module.exports = (robot) ->
   robot.hear /(\b|\@)grubb\b/i, (msg) ->
     msg.reply "Yo, Wo!"
 
-  robot.hear /the best/i, (msg) ->
-    msg.send "It's the best, @#{msg.message.user.name}. The best!"
-    msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
+  # robot.hear /the best/i, (msg) ->
+  #   msg.send "It's the best, @#{msg.message.user.name}. The best!"
+  #   msg.send "https://localtvwiti.files.wordpress.com/2014/01/bania.jpg"
 
   robot.hear /hjesus/i, (msg) ->
     msg.send "I bring you salvation and salvation accessories."
     msg.send "https://c1.staticflickr.com/1/590/22678847867_6d26301634_o.png"
 
-  robot.hear /\b(remember|member|memba)\b/i, (msg) ->
+  robot.hear /\b(member|memba)\b/i, (msg) ->
     messages = ["I memba", "Ooohh I memba", "Yeah, I member that", "Membeerrrrr", "I memba, too"]
     msg.reply msg.random messages
 
