@@ -57,7 +57,7 @@ module.exports = (robot) ->
   #   msg.reply msg.random messages
 
   robot.hear /\bnot\s+sure\s+if\b/i, (msg) ->
-    msg.send ":fry:"
+    msg.reply ":fry:"
 
   robot.hear /college/i, (msg) ->
     imageMe msg, "napoleon dynamite your mom goes to college", true, false, (url) ->
