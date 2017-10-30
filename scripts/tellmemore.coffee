@@ -117,6 +117,9 @@ module.exports = (robot) ->
   robot.hear /(\b|\@)not\s+(okay|ok)\b/i, (msg) ->
     msg.reply "this :clap: is :clap: not :clap: okay :clap:"
 
+  robot.hear /\b(bibimbap|bibimbop)\b/i, (msg) ->
+    msg.reply "bibim me up :hamburger:"
+
   # robot.hear /\b((to\s+do)|to-do|t'do|tuhdo)\b/i, (msg) ->
   #   messages = ["I T'DID IT!", "Already t'did", "it's t'done", "Tuhdid it", "It's already on my tuhdid list."]
   #   msg.reply msg.random messages
