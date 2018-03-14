@@ -18,26 +18,26 @@
 
 module.exports = (robot) ->
 
-  robot.hear /tell me more/i, (msg) ->
-    imageMe msg, "condescending wonka tell me more", false, false, (url) ->
-      msg.send url;
-      msg.send "Yes, please tell us more..."
+  # robot.hear /tell me more/i, (msg) ->
+  #   imageMe msg, "condescending wonka tell me more", false, false, (url) ->
+  #     msg.send url;
+  #     msg.send "Yes, please tell us more..."
 
   robot.hear /a trap/i, (msg) ->
     imageMe msg, "ackbar it's a trap", false, false, (url) ->
       msg.send url
 
-  robot.hear /(ketchup|catsup|heinz)/i, (msg) ->
-    imageMe msg, msg.match[1], false, false, (url) ->
-      msg.send "Hey! @eric loves #{msg.match[1]}!"
+  # robot.hear /(ketchup|catsup|heinz)/i, (msg) ->
+  #   imageMe msg, msg.match[1], false, false, (url) ->
+  #     msg.send "Hey! @eric loves #{msg.match[1]}!"
 
-  robot.hear /mock[\s\-]*up/i, (msg) ->
-    messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
-    msg.send msg.random messages
+  # robot.hear /mock[\s\-]*up/i, (msg) ->
+  #   messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
+  #   msg.send msg.random messages
 
-  robot.hear /pretty\s+(cool|kewl)/i, (msg) ->
-    messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
-    msg.reply msg.random messages
+  # robot.hear /pretty\s+(cool|kewl)/i, (msg) ->
+  #   messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
+  #   msg.reply msg.random messages
 
   robot.hear /^windor/i, (msg) ->
     msg.reply "Nope! #embracethes"
@@ -63,7 +63,7 @@ module.exports = (robot) ->
     imageMe msg, "napoleon dynamite your mom goes to college", true, false, (url) ->
       msg.send url
 
-  robot.hear /\b(cant|can't)\s+decide\b/i, (msg) ->
+  robot.hear /\b(cant|can’t)\s+decide\b/i, (msg) ->
     imageMe msg, "curb your enthusiasm can't decide", true, false, (url) ->
       msg.send url
 
@@ -84,13 +84,13 @@ module.exports = (robot) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
       msg.send url
 
-  robot.hear /\bsounds\s+good\b/i, (msg) ->
-    messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
-    msg.reply msg.random messages
+  # robot.hear /\bsounds\s+good\b/i, (msg) ->
+  #   messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
+  #   msg.reply msg.random messages
 
-  robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
-    messages = ["Agreed. Someone should get on this ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
-    msg.send msg.random messages
+  # robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
+  #   messages = ["Agreed. Someone should get on this ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
+  #   msg.send msg.random messages
 
   robot.hear /\b(moist|panties|slacks|ladies|dainties)\b/i, (msg) ->
     messages = ["Could you not", "plz no", "http://media.giphy.com/media/11w0l0hDWECDJK/giphy.gif", "http://media.giphy.com/media/js6YTUxKVjH3y/giphy.gif", "http://media.giphy.com/media/KLMmqAB5UbEHK/giphy.gif"]
@@ -110,7 +110,7 @@ module.exports = (robot) ->
   #   msg.send "I bring you salvation and salvation accessories."
   #   msg.send "https://c1.staticflickr.com/1/590/22678847867_6d26301634_o.png"
 
-  robot.hear /\b(member|memba)\b/i, (msg) ->
+  robot.hear /\b(member|memba|membered|membering)\b/i, (msg) ->
     messages = ["I memba", "Ooohh I memba", "Yeah, I member that", "Membeerrrrr", "I memba, too"]
     msg.reply msg.random messages
 
