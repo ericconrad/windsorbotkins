@@ -124,6 +124,8 @@ module.exports = (robot) ->
   #   messages = ["I T'DID IT!", "Already t'did", "it's t'done", "Tuhdid it", "It's already on my tuhdid list."]
   #   msg.reply msg.random messages
 
+  robot.hear /\bno+\b\r?$/i, (msg) ->
+    msg.send "yesn't*"
 
 # imageMe = (msg, query, animated, faces, cb) ->
 #   cb = animated if typeof animated == 'function'
