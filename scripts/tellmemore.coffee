@@ -35,9 +35,9 @@ module.exports = (robot) ->
   #   messages = ['Mock up? More like mock down amiright?', 'I want to MOCK that mock up #uptop', 'Worst. Mock-up. Ever.', "I want to send that mock up UP into the sky because I kicked it the way you would kick something that you didn't like very much"]
   #   msg.send msg.random messages
 
-  # robot.hear /pretty\s+(cool|kewl)/i, (msg) ->
-  #   messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
-  #   msg.reply msg.random messages
+  robot.hear /pretty\s+(cool|kewl)/i, (msg) ->
+    messages = ["I've seen cooler #justsayin", "Hmm maybe but maybe not, y'know?", "More like 'cool pretty' amiright?\n\n...\n\nGuys?", "No."]
+    msg.reply msg.random messages
 
   robot.hear /^windor/i, (msg) ->
     msg.reply "Nope! #embracethes"
@@ -84,13 +84,13 @@ module.exports = (robot) ->
     imageMe msg, "snl the californians ", true, false, (url) ->
       msg.send url
 
-  # robot.hear /\bsounds\s+good\b/i, (msg) ->
-  #   messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
-  #   msg.reply msg.random messages
+  robot.hear /\bsounds\s+good\b/i, (msg) ->
+    messages = ["Does it?", "If you say so.", "No it doesn't.", "You sound good", "Of all the sounds in all the languages of all the species on all the planets in all the galaxies in all the universe, that sounds the least good."]
+    msg.reply msg.random messages
 
-  # robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
-  #   messages = ["Agreed. Someone should get on this ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
-  #   msg.send msg.random messages
+  robot.hear /\bwindsor\s+(should|could|to|do)[^\n]+(do|say|give|return|that|this|be|act)\b/i, (msg) ->
+    messages = ["Agreed. Someone should get on this ^^", "Totes", "You know it", "Actually I shouldn't, but thanks anyway", "How about, no?", "Nah"]
+    msg.send msg.random messages
 
   robot.hear /\b(moist|panties|slacks|ladies|dainties)\b/i, (msg) ->
     messages = ["Could you not", "plz no", "http://media.giphy.com/media/11w0l0hDWECDJK/giphy.gif", "http://media.giphy.com/media/js6YTUxKVjH3y/giphy.gif", "http://media.giphy.com/media/KLMmqAB5UbEHK/giphy.gif"]
